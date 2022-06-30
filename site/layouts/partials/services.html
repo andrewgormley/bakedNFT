@@ -1,0 +1,17 @@
+<div class="marquee overflow-hidden w-full mb-20" data-duplicated='true' data-direction='left' data-pauseOnHover='false' data-speed='50' data-gap='75' data-startVisible='true'>
+  <span class="text-9xl uppercase text-black opacity-50 font-bold">{{ .Params.marquee1 }}</span>
+</div>
+
+<ul class="services border-t border-b border-gray-400 flex">
+  {{ range .Params.services }}
+    <li class="px-10 py-48">
+      <span class="pl-1 leading-9 font-bold text-black gradient-outline">
+        {{ .mark }}
+      </span>
+      <h2 class="text-5xl leading-none mb-5 uppercase text-white font-bold">{{ .title }}</h2>
+      <div class="markdown">
+        {{ .copy | markdownify }}
+      </div>
+    </li>
+  {{ end }}
+</ul>

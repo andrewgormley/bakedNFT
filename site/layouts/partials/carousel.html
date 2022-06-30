@@ -1,0 +1,24 @@
+<div class="glide pt-20">
+  <div class="glide__track" data-glide-el="track">
+    <ul class="glide__slides">
+        {{ range .Params.carousel }}
+          <li class="glide__slide rounded-lg overflow-hidden">
+            <img class="" src="{{ .img }}"/>
+          </li>
+        {{ end }}
+    </ul>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/glide.min.js"></script>
+<script type="text/javascript">
+  new Glide('.glide', {
+    type: 'carousel',
+    autoplay: 5000,
+    hoverpause: false,
+    gap: 12,
+    perView: 4,
+    peek: 100,
+    focusAt: 'center',
+  }).mount()
+</script>
