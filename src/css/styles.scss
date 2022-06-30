@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+body {
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// #logo {
+//   position: absolute;
+//   top: 14px;
+//   left: 50%;
+//   transform: translateX(-50%);
+//   width: 150px;
+// }
+
+#logo {
+
+  svg {
+    width: 100px;
+    height: auto;
+  }
+}
+
+.gradient-outline {
+  background: linear-gradient(90deg, #F68084, #A6C0FE);
+  background-size: 100% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 2px transparent;
+}
+
+.nfts-container {
+  height: 438px;
+}
+
+.nft-img {
+  width: 325px;
+  height: 350px;
+}
+
+#sun-container {
+  top: 20px;
+  left: 450px;
+  width: 300px;
+  height: 300px;
+
+  .sun-face {
+    width: 80px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+}
+
+.sun {
+  animation: rotation 45s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+.marquee {
+  span {
+    background: white;
+    background-size: 100% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-stroke: 2px transparent;
+  }
+}
+
+.markdown {
+  h2 {
+    @apply font-semibold pt-5 pb-2 text-2xl;
+
+    @media (min-width: 1024px) {
+      @apply text-4xl;
+    }
+  }
+  h3 {
+    @apply font-semibold text-xl;
+
+    @media (min-width: 1024px) {
+      @apply text-2xl;
+    }
+  }
+  h4 {
+  }
+  ul {
+    @apply list-inside list-disc pb-5;
+  }
+  p {
+    @apply normal-case;
+  }
+}
+
+@import url(https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.theme.min.css);
+@import url(https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.theme.min.css);
