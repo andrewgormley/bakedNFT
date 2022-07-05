@@ -5,9 +5,6 @@ import CMS from "netlify-cms-app";
 import tailwind from "!to-string-loader!css-loader!postcss-loader!sass-loader!../css/main.css";
 import styles from "!to-string-loader!css-loader!postcss-loader!sass-loader!../css/styles.scss";
 
-import WorkPreview from "./cms-preview-templates/work";
-
 CMS.registerPreviewStyle(tailwind, { raw: true });
 CMS.registerPreviewStyle(styles, { raw: true });
-CMS.registerPreviewTemplate("work", WorkPreview);
 CMS.init();
