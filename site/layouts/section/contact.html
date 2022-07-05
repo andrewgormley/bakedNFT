@@ -1,6 +1,7 @@
 {{ define "main" }}
 
-<div class="animate__animated animate__fadeIn w-full flex flex-wrap px-2">
+<div class="animate__animated animate__fadeIn w-full flex flex-wrap px-5">
+	<div class="border border-gray-400 w-full">
 
 		<div class="max-w-5xl mx-auto py-20 normal-case markdown">
 			{{ .Content }}
@@ -24,6 +25,7 @@
 			{{ partial "contact-form" . }}
 		</div>
 
+	</div>
 </div>
 
 {{ end }}

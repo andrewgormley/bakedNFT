@@ -1,9 +1,9 @@
-<div class="glide pt-20">
+<div id="wtf" class="glide pt-20 2xl:pt-40">
   <div class="glide__track" data-glide-el="track">
     <ul class="glide__slides">
         {{ range .Params.carousel }}
-          <li class="glide__slide rounded-lg overflow-hidden">
-            <img class="" src="{{ .img }}"/>
+          <li class="glide__slide overflow-hidden">
+            <img class="rounded-lg" src="{{ .img }}"/>
           </li>
         {{ end }}
     </ul>
@@ -20,5 +20,16 @@
     perView: 4,
     peek: 100,
     focusAt: 'center',
+    breakpoints: {
+      768: {
+        perView: 1,
+      },
+      1024: {
+        perView: 2
+      },
+      1280: {
+        perView: 3
+      },
+    }
   }).mount()
 </script>

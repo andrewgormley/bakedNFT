@@ -1,15 +1,17 @@
-<div class="marquee overflow-hidden w-full mb-20" data-duplicated='true' data-direction='left' data-pauseOnHover='false' data-speed='50' data-gap='75' data-startVisible='true'>
-  <span class="text-9xl uppercase text-black opacity-50 font-bold">{{ .Params.marquee1 }}</span>
+<div class="marquee overflow-hidden w-full mb-12 lg:mb-20 3xl:mb-40 text-9xl uppercase text-black opacity-50 font-bold" data-duplicated='true' data-direction='left' data-pauseOnHover='false' data-speed='50' data-gap='75' data-startVisible='true'>
+  <span>{{ .Params.marquee1 }}</span>
+  <span>{{ .Params.marquee1 }}</span>
+  <span>{{ .Params.marquee1 }}</span>
 </div>
 
-<ul class="services border-t border-b border-gray-400 flex">
+<ul id="services" class=" border-t border-b border-gray-400 flex flex-col lg:flex-row">
   {{ range .Params.services }}
-    <li class="px-10 py-48">
+    <li class="w-full lg:w-1/3 px-5 lg:px-10 3xl:px-20 py-12 lg:py-48">
       <span class="pl-1 leading-9 font-bold text-black gradient-outline">
         {{ .mark }}
       </span>
-      <h2 class="text-5xl leading-none mb-5 uppercase text-white font-bold">{{ .title }}</h2>
-      <div class="markdown">
+      <h2 class="text-3xl xl:text-5xl 3xl:text-7xl leading-none mb-5 uppercase text-white font-bold">{{ .title }}</h2>
+      <div class="markdown 3xl:text-xl">
         {{ .copy | markdownify }}
       </div>
     </li>

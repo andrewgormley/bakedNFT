@@ -26,6 +26,9 @@ module.exports = {
       'aqua': '#16FFBD'
     }),
     extend: {
+      screens: {
+        '3xl': '2000px',
+      },
       gridRow: {
         'span-7': 'span 7 / span 7',
         'span-8': 'span 8 / span 8',

@@ -7,19 +7,32 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-// #logo {
-//   position: absolute;
-//   top: 14px;
-//   left: 50%;
-//   transform: translateX(-50%);
-//   width: 150px;
-// }
-
 #logo {
 
   svg {
     width: 100px;
     height: auto;
+  }
+}
+
+.banner-title {
+  strong {
+    background: linear-gradient(90deg, #F68084, #A6C0FE);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 90%;
+      width: 100%;
+      left: 0;
+      height: 5px;
+      background: linear-gradient(90deg, #F68084, #A6C0FE);
+    }
   }
 }
 
@@ -33,17 +46,35 @@ body {
 .nfts-container {
   height: 438px;
 
+  @media (min-width: 1536px) {
+    height: 545px;
+  }
+
   ul li {
+    width: fit-content;
+
     &:first-child {
       @apply z-30 right-0;
+
+      @media (min-width: 1536px) {
+        @apply left-24;
+      }
     }
 
     &:nth-child(2) {
       @apply z-20 right-12 opacity-50;
+
+      @media (min-width: 1536px) {
+        @apply left-12;
+      }
     }
 
     &:nth-child(3) {
       @apply z-10 right-24 opacity-25;
+
+      @media (min-width: 1536px) {
+        @apply left-0;
+      }
     }
   }
 }
@@ -51,13 +82,22 @@ body {
 .nft-img {
   width: 325px;
   height: 350px;
+
+  @media (min-width: 1536px) {
+    width: 425px;
+    height: 457px;
+  }
 }
 
 #sun-container {
   top: 20px;
-  left: 450px;
+  right: 10%;
   width: 300px;
   height: 300px;
+
+  @media (min-width: 1280px) {
+    left: 35%;
+  }
 
   .sun-face {
     width: 80px;
@@ -82,10 +122,18 @@ body {
   }
 }
 
-.services {
+#services {
   li {
     &:nth-child(2) {
-      @apply border-r border-l border-gray-400;
+      @apply border-gray-400;
+
+      @media (max-width: 1024px) {
+        @apply border-t border-b;
+      }
+
+      @media (min-width: 1024px) {
+        @apply border-r border-l;
+      }
     }
   }
 }
@@ -99,11 +147,19 @@ body {
   }
 }
 
-.nyan-cat {
-  width: 134px;
-  right: -48px;
-  top: -25px;
+#play-btn {
+  max-width: 400px;
+  height: 60px;
+
+  .nyan-cat {
+    width: 134px;
+    right: -58px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 }
+
+
 
 .markdown {
   h2 {

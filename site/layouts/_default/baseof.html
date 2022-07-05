@@ -5,7 +5,9 @@
 
     {{ partial "header" . }}
 
-    {{ block "main" . }}{{ end }}
+    <div class="md:pt-12">
+      {{ block "main" . }}{{ end }}
+    </div>
 
     {{ partial "footer" . }}
 

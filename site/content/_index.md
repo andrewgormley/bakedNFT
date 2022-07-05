@@ -1,6 +1,6 @@
 ---
 title:
-bannerTitle: We launch NFT projects that build brand value
+bannerTitle: We launch **NFT** projects that build brand value
 bannerCopy: We know the blockchain. We’re deeply invested, well-positioned and experienced across the most important technology and creative platforms in the NFT world.
 nfts:
   - title: Baked Creative

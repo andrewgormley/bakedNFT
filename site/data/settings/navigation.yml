@@ -1,22 +1,6 @@
 nav:
-  - {label: 'Home', URL: '/'}
-  - {label: 'Work', URL: '/work/'}
-  - {label: 'About', URL: '/about/'}
-  - {label: 'Contact', URL: '/contact/'}
-  - {label: 'Jobs', URL: '/jobs/'}
+  - {label: 'services', URL: './#services'}
+  - {label: 'wtf is an nft', URL: './#wtf'}
+  - {label: 'why us', URL: './#why'}
 
-description: 'Creativity that never comes down. We solve the toughest, tastiest client briefs through impactful creativity.'
-
-brands:
-  - {label: 'Under Armour'}
-  - {label: 'ASICS'}
-  - {label: 'Timberland'}
-  - {label: 'Haglöfs'}
-  - {label: 'The North Face'}
-
-services:
-  - {label: 'Strategy'}
-  - {label: 'Creative'}
-  - {label: 'Production'}
-
-contact: 'hello@bakedcreative.co﻿'
+btn: {label: 'contact us', URL: 'contact'}
