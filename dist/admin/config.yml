@@ -17,66 +17,6 @@ slug:
   sanitize_replacement: "-"
 
 collections:
-  - name: "work"
-    identifier_field: title
-    label: "Work"
-    folder: "site/content/work"
-    create: true
-    filter: {field: "visible", value: true}
-    slug: "{{slug}}"
-    editor:
-      preview: false
-    fields:
-      - {label: "In Page Title", name: "inPageTitle", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Meta Title", name: "title", widget: "string"}
-      - {label: "Meta Description", name: "description", widget: "text"}
-      - {label: "Visible", name: "visible", widget: hidden, default: true}
-      - label: "Tags"
-        name: "tags"
-        widget: "list"
-        create: true
-        field: {name: "tag", widget: "string"}
-      - {label: "Thumbnail Image", name: "image", widget: "image"}
-      - {label: "Thumbnail Video", name: "thumbnailVideo", widget: "file", required: false}
-      - {label: "Intro Blurb", name: "intro", widget: "text", required: false}
-      - {label: "Video", name: "video", widget: "string", required: false}
-      - label: "Body section"
-        name: "sections"
-        widget: "list"
-        collapsed: false
-        required: false
-        fields:
-          - {label: "Sub title", name: "subtitle", widget: "string"}
-          - {label: "Copy", name: "copy", widget: "markdown"}
-      - label: "Gallery"
-        name: "carousel"
-        widget: "list"
-        required: false
-        fields:
-          - {label: "Image", name: "image", widget: "image", required: false}
-          - {label: "Video", name: "video", widget: "file", required: false}
-          - {label: "Alt text", name: "alt", widget: "string", required: false}
-      - {label: "PDF Case Study", name: "pdf", widget: "file", required: false}
-  - name: "jobs"
-    identifier_field: title
-    label: "Jobs"
-    folder: "site/content/jobs"
-    create: true
-    filter: {field: "visible", value: true}
-    slug: "{{slug}}"
-    fields:
-      - {label: "In Page Title", name: "inPageTitle", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Meta Title", name: "title", widget: "string", default: ''}
-      - {label: "Meta Description", name: "description", widget: "text"}
-      - {label: "Visible", name: "visible", widget: hidden, default: true}
-      - {label: "Category", name: "category", widget: "string", default: ''}
-      - {label: "Job Type", name: "jobType", widget: "string", default: ''}
-      - {label: "Location", name: "location", widget: "string", default: ''}
-      - {label: "Salary", name: "salary", widget: "string", default: ''}
-      - {label: "Note", name: "note", widget: "string", default: '', required: false}
-      - {label: "Body", name: "body", widget: "markdown", default: ''}
   - name: "pages"
     label: "Main Pages"
     files:
@@ -87,66 +27,57 @@ collections:
           preview: false
         fields:
           - {label: "Meta Title", name: "title", widget: "string", required: false}
-          - {label: "Featured Block Link", name: "link", widget: "string", required: true}
-          - {label: "Featured Block Title", name: "featuredBlockTitle", widget: "string", required: true}
-          - {label: "Featured Block Copy", name: "featuredBlockCopy", widget: "string", required: true}
-          - {label: "Featured Block Image", name: "image", widget: "image", required: true}
-      - file: "site/content/work/_index.md"
-        label: "Work"
-        name: "work"
-        editor:
-          preview: false
-        fields:
-          - {label: "Meta Title", name: "title", widget: "string", required: false}
-          - {label: "Meta Description", name: "description", widget: "text"}
-      - file: "site/content/jobs/_index.md"
-        label: "Jobs"
-        name: "jobs"
-        editor:
-          preview: false
-        fields:
-          - {label: "Meta Title", name: "title", widget: "string", required: false}
-          - {label: "Meta Description", name: "description", widget: "text"}
-          - {label: "Empty State", name: "emptyState", widget: "text"}
-      - file: "site/content/about/_index.md"
-        label: "About Page"
-        name: "about"
-        fields:
-          - {label: "In Page Title", name: "inPageTitle", widget: "string"}
-          - {label: "Meta Title", name: "title", widget: "string"}
-          - {label: "Meta Description", name: "description", widget: "text"}
-          - {label: "Intro Blurb", name: "intro", widget: "text"}
-          - label: "Image Row 1"
-            name: "imageRow1"
+          - {label: "Banner Title", name: "bannerTitle", widget: "string", required: true}
+          - {label: "Banner Copy", name: "bannerCopy", widget: "markdown", required: false}
+          - label: "Banner NFTs"
+            name: "nfts"
             widget: "list"
+            collapsed: false
+            required: false
             allow_add: false
             fields:
-              - {label: "Image", name: "image", widget: "image"}
+              - {label: "Author", name: "title", widget: "string" }
+              - {label: "ID", name: "id", widget: "string"}
+              - {label: "Image", name: "img", widget: "image"}
+          - {label: "Marquee 1", name: "marquee1", widget: "string"}
           - label: "Services"
-            name: "services"
+            name: "nfts"
             widget: "list"
+            collapsed: false
+            required: false
             allow_add: false
             fields:
-              - {label: "Service title", name: "title", widget: "string"}
-              - {label: "Service description", name: "description", widget: "text"}
-          - label: "Values"
-            name: "values"
+              - {label: "Mark", name: "mark", widget: "string" }
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Copy", name: "copy", widget: "markdown", required: false}
+          - label: "Gallery"
+            name: "carousel"
             widget: "list"
+            required: false
+            allow_add: true
             fields:
-              - {label: "Value title", name: "title", widget: "string"}
-              - {label: "Value description", name: "description", widget: "text"}
-          - label: "Image Row 2"
-            name: "imageRow2"
+              - {label: "Image", name: "img", widget: "image", required: false}
+          - {label: "WTF Title", name: "wtfTitle", widget: "string", required: false}
+          - label: "WTF Columns"
+            name: "wtfColumn"
             widget: "list"
+            collapsed: false
+            required: false
             allow_add: false
             fields:
-              - {label: "Image", name: "image", widget: "image"}
-          - label: "Image Row 3"
-            name: "imageRow3"
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Copy", name: "copy", widget: "markdown", required: false}
+          - {label: "Marquee 2", name: "marquee2", widget: "string"}
+          - label: "Why us"
+            name: "whyus"
             widget: "list"
+            collapsed: false
+            required: false
             allow_add: false
             fields:
-              - {label: "Image", name: "image", widget: "image"}
+              - {label: "Mark", name: "mark", widget: "string" }
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Copy", name: "copy", widget: "markdown", required: false}
       - file: "site/content/contact/_index.md"
         label: "Contact Page"
         name: "contact"
@@ -171,22 +102,12 @@ collections:
             fields:
               - {label: "Name", name: "label", widget: "string"}
               - {label: "Path", name: "URL", widget: "string"}
-          - label: "Description"
-            name: "description"
-            widget: "text"
-          - label: "Brands"
-            name: "brands"
+          - label: "Button"
+            name: "btn"
             widget: "list"
             fields:
-              - {label: "Brand", name: "label", widget: "string"}
-          - label: "Services"
-            name: "services"
-            widget: "list"
-            fields:
-              - {label: "Service", name: "label", widget: "string"}
-          - label: "Contact"
-            name: "contact"
-            widget: "string"
+              - {label: "Content", name: "label", widget: "string"}
+              - {label: "Path", name: "URL", widget: "string"}
       - file: "site/data/settings/footer.yml"
         label: "Footer"
         name: "footer"
