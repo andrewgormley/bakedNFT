@@ -41,7 +41,7 @@ collections:
               - {label: "Image", name: "img", widget: "image"}
           - {label: "Marquee 1", name: "marquee1", widget: "string"}
           - label: "Services"
-            name: "nfts"
+            name: "services"
             widget: "list"
             collapsed: false
             required: false
