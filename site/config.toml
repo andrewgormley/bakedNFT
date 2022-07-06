@@ -1,8 +1,8 @@
 baseurl = "/"
 languageCode = "en-us"
 languageLang = "en"
-title = "Baked | Creative Agency | Independent Creative Studio"
+title = "BakedNFT | Web3 Agency | NFT Marketing Studio"
 
 [params]
-description = "Baked is an independent creative studio working with some of the world’s biggest brands. We’re specialists in world-class content production, 3D animation and creative design."
+description = "Baked is an independent creative studio working with some of the world’s biggest brands. We launch NFT projects that build brand value."
 disableKinds = ["RSS", "taxonomy", "taxonomyTerm"]
